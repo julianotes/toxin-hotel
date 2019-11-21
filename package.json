@@ -6,10 +6,10 @@
   "homepage": "https://julianotes.github.io/toxin-hotel",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/main.pug --open",
-    "build": "parcel build src/main.pug -d docs --public-url ./",
+    "dev": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug -d dist --public-url ./",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d docs"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
