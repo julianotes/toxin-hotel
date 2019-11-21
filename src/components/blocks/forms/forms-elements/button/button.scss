@@ -1,0 +1,45 @@
+.button {
+    height: 34px;
+    width: 101px;
+    background: $main-grad;
+    border-radius: 22px;
+    cursor: pointer;
+    outline: none;
+    @include h3Style;
+    color: #fff;
+
+    &:active {
+        opacity: .5;
+    }
+}
+
+.button-reverse-wrap {
+    height: 34px;
+    width: 101px;
+    position: relative;
+    background: $main-grad;
+    border-radius: 22px;
+    z-index: -100;
+}
+.button-reverse {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    bottom:1px;
+    right: 1px;
+    z-index: 100;
+    height: 32px;
+    width: 98px;
+    background: #fff;
+    border-radius: 22px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    outline: none;
+    @include h3Style;
+    color: $purple;
+
+    &:active {
+        opacity: .5;
+    }    
+}
+

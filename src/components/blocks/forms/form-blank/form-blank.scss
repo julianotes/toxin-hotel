@@ -1,0 +1,15 @@
+.form-blank {  
+  min-height: 374px;
+  max-width: 380px;
+  background-color: #fff;
+  padding: 40px 30px 30px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.5s all ease-in-out;
+}
+.form-blank__title {
+  @include h1Style;
+}
+
+//media queries

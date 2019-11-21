@@ -1,0 +1,35 @@
+$drop-width: width;
+@mixin dropdown {
+  height: 44px;
+  width: $drop-width;
+  margin-top: 5px;
+  padding:8px 0 8px 15px;
+  background-color: #fff;
+  border: 1px solid rgba(31, 32, 65, .25);
+  border-radius: $main-border-rad;
+  @include bodyFont;
+  cursor: pointer;
+}
+
+.dropdown {
+  @include dropdown;
+  position: relative;  
+  &-icon {
+    position: absolute;
+    right:15px;
+    top: 18px;
+    &:active {
+      opacity: .8;
+      transform: translateY(3px);
+      transform: translateY(3px);
+    }
+  }
+  &-label {
+    @include h3Style;
+    display: block;
+    margin-top: 104px;
+  }
+}
+
+
+

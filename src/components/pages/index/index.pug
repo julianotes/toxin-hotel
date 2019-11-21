@@ -1,0 +1,16 @@
+extends /components/layouts/main-layout.pug
+block content 
+  section.section-search
+    .container
+      .section-search-wrap
+        .section-search__form-wrap
+          include /components/blocks/forms/form-blank/form-blank.pug
+           +formTitle('Найдём номера под ваши пожелания')
+           block form-blank-content
+            include /components/blocks/forms/forms-elements/dropdowns/dropdown/dropdown.pug
+        p.section-search__tagline Лучшие номера для вашей работы,<br> отдыха и просто вдохновения
+
+
+
+
+

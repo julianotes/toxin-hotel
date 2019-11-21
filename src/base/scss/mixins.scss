@@ -1,0 +1,90 @@
+@import "./variables.scss";
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content};
+    :-moz-placeholder {@content};
+    ::-moz-placeholder {@content};
+    ::-ms-input-placeholder {@content};
+}
+
+@mixin h1Style {
+    font-family: $secondFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.7142857142857142rem;
+    line-height: 30px;
+    letter-spacing: -1px;
+    color: $primary-color;
+
+    @media(max-width: 414px) {
+    font-size: 1.375rem;
+    }
+}
+
+@mixin h2Style {
+  font-family: $secondFont; 
+  font-style: normal; 
+  font-weight: 700;
+  font-size: 1.3571428571428572rem;
+  line-height:24px;
+  color: $primary-color; 
+}
+
+@mixin h3Style {
+  font-family: $mainFont; 
+  font-style: normal; 
+  font-weight: 700;
+  font-size: 0.8571428571428571rem;
+  line-height: 15px;
+  color: $primary-color;
+  text-transform: uppercase; 
+}
+
+@mixin bodyFont {
+  font-family: $mainFont; 
+  font-style: normal; 
+  font-weight: $mainFontWeight;
+  font-size: $mainFontSz;
+  line-height: $mainLineHeight;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+@mixin container {
+   margin: 0 auto;
+   width: 100vw;
+   max-width: 1160px;
+   overflow: hidden;
+   height: 100%;
+  //  overflow: auto; // только для флоат элементов т.к. они выпадают из контейнеров
+}
+
+@mixin size($width, $height: $width){
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($f-direction, $justify-content, $align-items) { // @include flex(flex,row, center,center);
+  display: flex;
+  flex-direction:$f-direction;
+  flex-wrap:wrap;
+  justify-content:$justify-content;
+  align-items: $align-items;
+}
+
+@mixin visually-hidden {
+  &:not(:focus):not(:active),
+  input[type="checkbox"].visually-hidden,
+  input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+ }
+}
