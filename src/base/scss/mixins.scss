@@ -11,9 +11,9 @@
     font-family: $secondFont;
     font-style: normal;
     font-weight: 700;
-    font-size: 1.7142857142857142rem;
+    font-size: 1.5rem;
     line-height: 30px;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
     color: $primary-color;
 
     @media(max-width: 414px) {
@@ -46,7 +46,31 @@
   font-weight: $mainFontWeight;
   font-size: $mainFontSz;
   line-height: $mainLineHeight;
+  letter-spacing: 1px;
   color: rgba(31, 32, 65, 0.75);
+}
+
+@mixin h2lastFont {
+  font-family: $lastFont; 
+  font-style: normal; 
+  font-weight: 700;
+  font-size: 1.3571428571428572rem;
+  line-height:24px;
+  color: $primary-color; 
+}
+
+@mixin h1lastFont {
+  font-family: $lastFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.7142857142857142rem;
+    line-height: 30px;
+    letter-spacing: -2px;
+    color: $primary-color;
+
+    @media(max-width: 414px) {
+    font-size: 1.375rem;
+    }
 }
 
 @mixin container {
@@ -56,6 +80,12 @@
    overflow: hidden;
    height: 100%;
   //  overflow: auto; // только для флоат элементов т.к. они выпадают из контейнеров
+  @media(max-width: 1270px) {
+    width: 90vw;
+  }
+  @media(max-width: 576px) {
+    width: 98vw;
+  }
 }
 
 @mixin size($width, $height: $width){
@@ -63,12 +93,18 @@
   height: $height;
 }
 
-@mixin flex($f-direction, $justify-content, $align-items) { // @include flex(flex,row, center,center);
+@mixin flex($f-direction, $justify-content, $align-items){
   display: flex;
   flex-direction:$f-direction;
   flex-wrap:wrap;
   justify-content:$justify-content;
   align-items: $align-items;
+}
+
+@mixin svg-doubling ($width, $height, $imgpath){
+  width: $width;
+  height: $height;
+  background: url(#{$imgpath});
 }
 
 @mixin visually-hidden {

@@ -1,0 +1,11 @@
+.footer-copyright {
+  height: 70px;
+  @include flex(row, space-between, center);
+}
+.footer-copyright__info {
+  @include bodyFont;
+  line-height: 17px;
+  @media(max-width: 1200px) {
+    font-size: 12px;
+  }
+}

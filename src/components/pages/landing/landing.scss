@@ -4,9 +4,15 @@
 .section-search {
   // height: calc(100vh - 512px);
   height: 830px;
+  max-width: 1440px;
+  margin: 0 auto;
   background-image: url("/assets/images/main-bg-1.jpg");
   background-size: cover;
   overflow: hidden;
+
+  @media(max-width: 1100px) {
+    height: auto;
+  }
 }
 .container{
   @include container;
@@ -25,9 +31,9 @@
   max-height: 830px;
   overflow: hidden; //решает схлопывание марджинов
 
-  @media (max-width: 1199.98px) {
-    margin:5% 0 0 10%;
-  }
+  // @media (max-width: 1199.98px) {
+  //   margin:5% 0 0 10%;
+  // }
   @media (max-width: 800px) {
     margin:2%;
     @include flex(column,center,center);
@@ -37,7 +43,7 @@
 .section-search__tagline {
   @include bodyFont;
   text-align: right;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 
   @media (max-width: 1199.98px){
     margin-right: 10%;

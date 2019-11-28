@@ -1,0 +1,5 @@
+.arrow-left {
+  @include flex(row, center,center);
+  width: 44px;
+  height: 44px;
+}

@@ -7,11 +7,12 @@
  */
 
 html {
-  line-height:24px;
-  font-size: 14px;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+}
+body {
+  font-size: 14px;
 }
 
 *, *:before, *:after {
@@ -102,9 +103,9 @@ mark,
 audio,
 video {
   border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  // font-size: 100%;
+  // font: inherit;
+  // vertical-align: baseline;
 }
 
 /**
@@ -194,6 +195,12 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
+}
+
+svg {
+  display: block;
+  
 }
 
 /**
@@ -229,7 +236,7 @@ kbd,
 samp {
   font-family: monospace, monospace;
   /* 1 */
-  font-size: 1em;
+  font-size: 1rem;
   /* 2 */
 }
 
