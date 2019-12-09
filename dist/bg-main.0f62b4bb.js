@@ -117,8 +117,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.svg":[function(require,module,exports) {
-module.exports = "/Montserrat-Bold.bc121b6d.svg";
+})({"assets/images/bg-main.jpg":[function(require,module,exports) {
+module.exports = "/bg-main.0f62b4bb.jpg";
 },{}],"C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -324,4 +324,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/Montserrat-Bold.bc121b6d.js.map
+//# sourceMappingURL=/bg-main.0f62b4bb.js.map
