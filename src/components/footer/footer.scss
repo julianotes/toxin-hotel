@@ -1,0 +1,26 @@
+@import "/components/footer/blocks/footer-item.scss";
+@import "/components/footer/blocks/footer-title.scss";
+@import "/components/nav-link/nav-link.scss";
+@import "/components/footer/blocks/footer-copyright.scss";
+@import "/components/footer/blocks/footer-subs.scss";
+@import "/components/footer/blocks/footer-desc.scss";
+
+.footer {
+  border-top: 1px solid rgba(31,32,65,.1);
+}
+
+.container {
+  @include container;
+}
+
+.footer-main {
+  @include flex(row, space-between, flex-start);
+  height: 372px;
+  width: 100%;
+  padding-top: 100px;
+}
+.footer-main__info {
+  margin-right: 30px;
+}
+
+

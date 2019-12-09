@@ -1,0 +1,19 @@
+.nav-link__li {
+  user-select: none;
+}
+.nav-link__link{
+  display: block;
+  padding:10px 0 10px 0;
+  @include bodyFont;
+  font-size: .875rem;
+  line-height: 17px;
+  opacity: 0.5;
+
+  &:visited {
+    color: $primary-color;
+  }
+  
+  @media(max-width: 1200px) {
+    font-size: 13px;
+  }
+}

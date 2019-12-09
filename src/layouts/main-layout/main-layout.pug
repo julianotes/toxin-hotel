@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0 maximum-scale=1.0, minimal-ui")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(property="og:url" content="https://julianotes.github.io/toxin-hotel")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content="Toxin-лучший отель в Нижнеподкалымске")
+        meta(property="og:site_name" content="Toxin-hotel")
+        meta(property="article:author" content="Toxin-group")
+        meta(name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+        meta(name='google' value='notranslate')
+        meta(name="description" content="Заказать номера в лучшем отеле Toxin")
+        meta(name="keywords" content="Номера, заказать номер")
+        block page-title
+          title #{pageTitle}
+        link(rel="shortcut icon" href="./assets/images/favicon.ico")
+    body.pageClass
+      header.header
+        .container
+          include /components/header/header.pug
+      main.main
+        block content
+      footer.footer
+          include /components/footer/footer.pug

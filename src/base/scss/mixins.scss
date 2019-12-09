@@ -7,6 +7,11 @@
     ::-ms-input-placeholder {@content};
 }
 
+@mixin changeColor($opacity) {
+  color: $primary-color;
+  opacity: $opacity;
+}
+
 @mixin h1Style {
     font-family: $secondFont;
     font-style: normal;
@@ -15,7 +20,6 @@
     line-height: 30px;
     letter-spacing: 1px;
     color: $primary-color;
-
     @media(max-width: 414px) {
     font-size: 1.375rem;
     }
@@ -34,7 +38,7 @@
   font-family: $mainFont; 
   font-style: normal; 
   font-weight: 700;
-  font-size: 0.8571428571428571rem;
+  font-size: 0.75rem;
   line-height: 15px;
   color: $primary-color;
   text-transform: uppercase; 
@@ -46,7 +50,6 @@
   font-weight: $mainFontWeight;
   font-size: $mainFontSz;
   line-height: $mainLineHeight;
-  letter-spacing: 1px;
   color: rgba(31, 32, 65, 0.75);
 }
 
@@ -83,14 +86,14 @@
   @media(max-width: 1270px) {
     width: 90vw;
   }
-  @media(max-width: 576px) {
+  @media(max-width: 580px) {
     width: 98vw;
   }
 }
 
-@mixin size($width, $height: $width){
-  width: $width;
-  height: $height;
+@mixin size($w, $h){
+  width: $w;
+  height: $h;
 }
 
 @mixin flex($f-direction, $justify-content, $align-items){

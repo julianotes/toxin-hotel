@@ -1,7 +1,7 @@
 // Quicksand
 
 @font-face {
-  font-family: 'Quicksand-Bold';
+  font-family: 'Quicksand';
   src: url('../src/assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.eot');
   src: url('../src/assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.woff') format('woff'),
        url('../src/assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.ttf') format('truetype'),
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-	font-family: 'Quicksand-Regular';
+	font-family: 'Quicksand';
 	src: url('../src/assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.eot');  
   src: url('../src/assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.woff') format('woff'),
        url('../src/assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.ttf') format('truetype'),
@@ -23,7 +23,7 @@
 //Montserrat
 
 @font-face {
-	font-family: 'Montserrat-Bold';
+	font-family: 'Montserrat';
 	src: url('../src/assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.eot');
   src: url('../src/assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.woff') format('woff'),
        url('../src/assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.ttf') format('truetype'),
@@ -33,7 +33,7 @@
 }
 
 @font-face {
-	font-family: 'Montserrat-Regular';
+	font-family: 'Montserrat';
 	src: url('../src/assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.eot');
   src: url('../src/assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.woff') format('woff'),
        url('../src/assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.ttf') format('truetype'),
@@ -57,9 +57,21 @@
 }
 
 
+//Font Awesome 5 and brands
+@font-face {
+  font-family: 'Font_Awesome';
+  font-style: normal;
+    src:url('../src/assets/fonts/Font_Awesome/fontawesome-webfont.eot');
+    src:url('../src/assets/fonts/Font_Awesome/fontawesome-webfont.woff2') format('woff2'),
+        url('../src/assets/fonts/Font_Awesome/fontawesome-webfont.woff') format('woff'),
+        url('../src/assets/fonts/Font_Awesome/fontawesome-webfont.ttf') format('truetype'),
+        url('../src/assets/fonts/Font_Awesome/fontawesome-webfont.svg') format('svg');
+}
+
+
 /* open-sans-300 - latin_cyrillic */
 @font-face {
-  font-family: 'OpenSansLight';
+  font-family: 'OpenSans';
   src: url('../src/assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.eot'); /* IE9 Compat Modes */
   src: url('../src/assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.woff') format('woff'), /* Modern Browsers */
        url('../src/assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -69,7 +81,7 @@
 
 // /* open-sans-regular - latin_cyrillic */
 @font-face {
-  font-family: 'OpenSansRegular';
+  font-family: 'OpenSans';
   src: url('../src/assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.eot'); /* IE9 Compat Modes */
   src: url('../src/assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.woff') format('woff'), /* Modern Browsers */
        url('../src/assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -79,7 +91,7 @@
 
 /* open-sans-600 - latin_cyrillic */
 @font-face {
-  font-family: 'OpenSansSemiBold';
+  font-family: 'OpenSans';
   src: url('../src/assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.eot'); /* IE9 Compat Modes */
   src: url('../src/assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.woff') format('woff'), /* Modern Browsers */
        url('../src/assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -88,7 +100,7 @@
 }
 /* open-sans-700 - latin_cyrillic */
 @font-face {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSans';
   src: url('../src/assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.eot'); /* IE9 Compat Modes */
   src: url('../src/assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.woff') format('woff'), /* Modern Browsers */
        url('../src/assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.ttf') format('truetype'); /* Safari, Android, iOS */

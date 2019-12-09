@@ -1,0 +1,18 @@
+@import "src/components/header/header.scss";
+@import "src/components/footer/footer.scss";
+@import "src/pages/landing/landing.scss";
+
+.header {
+  height: 70px;
+  background-color: #fff;
+}
+.footer {
+  height: 372px;
+  background-color: #fff;
+  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+}
+
+.logo {
+  @include svg-doubling(106px, 40px, '/assets/images/logo.png');
+}
+

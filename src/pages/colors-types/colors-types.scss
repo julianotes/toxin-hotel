@@ -1,0 +1,21 @@
+.container-ui{
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 1440px;
+  overflow: hidden;
+  height: 100%;
+ //  overflow: auto; // только для флоат элементов т.к. они выпадают из контейнеров
+ @media(max-width: 1270px) {
+   width: 90vw;
+ }
+
+ @media(max-width: 580px) {
+   width: 98vw;
+ }
+}
+
+.logo-ui {
+  width: 100%;
+}
+
+
