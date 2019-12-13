@@ -117,79 +117,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"index.scss":[function(require,module,exports) {
+})({"index.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./assets\\fonts\\Quicksand\\Quicksand-bold\\Quicksand-Bold.eot":[["Quicksand-Bold.5862033e.eot","assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.eot"],"assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.eot"],"./assets\\fonts\\Quicksand\\Quicksand-bold\\Quicksand-Bold.woff":[["Quicksand-Bold.3ba12430.woff","assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.woff"],"assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.woff"],"./assets\\fonts\\Quicksand\\Quicksand-bold\\Quicksand-Bold.ttf":[["Quicksand-Bold.b1139de2.ttf","assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.ttf"],"assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.ttf"],"./assets\\fonts\\Quicksand\\Quicksand-bold\\Quicksand-Bold.svg":[["Quicksand-Bold.4dea1ff1.svg","assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.svg"],"Quicksand-Bold.4dea1ff1.js","assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.svg"],"./assets\\fonts\\Quicksand\\Quicksand-regular\\Quicksand-Regular.eot":[["Quicksand-Regular.36bf2dff.eot","assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.eot"],"assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.eot"],"./assets\\fonts\\Quicksand\\Quicksand-regular\\Quicksand-Regular.woff":[["Quicksand-Regular.e94fb1b6.woff","assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.woff"],"assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.woff"],"./assets\\fonts\\Quicksand\\Quicksand-regular\\Quicksand-Regular.ttf":[["Quicksand-Regular.ffc9d9ec.ttf","assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.ttf"],"assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.ttf"],"./assets\\fonts\\Quicksand\\Quicksand-regular\\Quicksand-Regular.svg":[["Quicksand-Regular.a9d46757.svg","assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.svg"],"Quicksand-Regular.a9d46757.js","assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.svg"],"./assets\\fonts\\Montserrat\\Montserrat-Bold\\Montserrat-Bold.eot":[["Montserrat-Bold.9ce880df.eot","assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.eot"],"assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.eot"],"./assets\\fonts\\Montserrat\\Montserrat-Bold\\Montserrat-Bold.woff":[["Montserrat-Bold.2af363c0.woff","assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.woff"],"assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.woff"],"./assets\\fonts\\Montserrat\\Montserrat-Bold\\Montserrat-Bold.ttf":[["Montserrat-Bold.14de1886.ttf","assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.ttf"],"assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.ttf"],"./assets\\fonts\\Montserrat\\Montserrat-Bold\\Montserrat-Bold.svg":[["Montserrat-Bold.bc121b6d.svg","assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.svg"],"Montserrat-Bold.bc121b6d.js","assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.svg"],"./assets\\fonts\\Montserrat\\Montserrat-Regular\\Montserrat-Regular.eot":[["Montserrat-Regular.b06d3a6e.eot","assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.eot"],"assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.eot"],"./assets\\fonts\\Montserrat\\Montserrat-Regular\\Montserrat-Regular.woff":[["Montserrat-Regular.e890bba2.woff","assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.woff"],"assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.woff"],"./assets\\fonts\\Montserrat\\Montserrat-Regular\\Montserrat-Regular.ttf":[["Montserrat-Regular.a2775d6d.ttf","assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.ttf"],"assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.ttf"],"./assets\\fonts\\Montserrat\\Montserrat-Regular\\Montserrat-Regular.svg":[["Montserrat-Regular.83d63e02.svg","assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.svg"],"Montserrat-Regular.83d63e02.js","assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.svg"],"./assets\\fonts\\Material-Icons\\MaterialIcons-Regular.eot":[["MaterialIcons-Regular.7aff73a1.eot","assets/fonts/Material-Icons/MaterialIcons-Regular.eot"],"assets/fonts/Material-Icons/MaterialIcons-Regular.eot"],"./assets\\fonts\\Material-Icons\\MaterialIcons-Regular.woff2":[["MaterialIcons-Regular.849aec31.woff2","assets/fonts/Material-Icons/MaterialIcons-Regular.woff2"],"assets/fonts/Material-Icons/MaterialIcons-Regular.woff2"],"./assets\\fonts\\Material-Icons\\MaterialIcons-Regular.woff":[["MaterialIcons-Regular.fce9fa05.woff","assets/fonts/Material-Icons/MaterialIcons-Regular.woff"],"assets/fonts/Material-Icons/MaterialIcons-Regular.woff"],"./assets\\fonts\\Material-Icons\\MaterialIcons-Regular.ttf":[["MaterialIcons-Regular.326f798b.ttf","assets/fonts/Material-Icons/MaterialIcons-Regular.ttf"],"assets/fonts/Material-Icons/MaterialIcons-Regular.ttf"],"./assets\\fonts\\Font_Awesome\\fontawesome-webfont.eot":[["fontawesome-webfont.04172b94.eot","assets/fonts/Font_Awesome/fontawesome-webfont.eot"],"assets/fonts/Font_Awesome/fontawesome-webfont.eot"],"./assets\\fonts\\Font_Awesome\\fontawesome-webfont.woff2":[["fontawesome-webfont.ba48bb7d.woff2","assets/fonts/Font_Awesome/fontawesome-webfont.woff2"],"assets/fonts/Font_Awesome/fontawesome-webfont.woff2"],"./assets\\fonts\\Font_Awesome\\fontawesome-webfont.woff":[["fontawesome-webfont.ecdb1109.woff","assets/fonts/Font_Awesome/fontawesome-webfont.woff"],"assets/fonts/Font_Awesome/fontawesome-webfont.woff"],"./assets\\fonts\\Font_Awesome\\fontawesome-webfont.ttf":[["fontawesome-webfont.a69020b4.ttf","assets/fonts/Font_Awesome/fontawesome-webfont.ttf"],"assets/fonts/Font_Awesome/fontawesome-webfont.ttf"],"./assets\\fonts\\Font_Awesome\\fontawesome-webfont.svg":[["fontawesome-webfont.40d80bdd.svg","assets/fonts/Font_Awesome/fontawesome-webfont.svg"],"fontawesome-webfont.40d80bdd.js","assets/fonts/Font_Awesome/fontawesome-webfont.svg"],"./assets\\fonts\\Open-Sans\\OpenSansLight\\OpenSansLight.eot":[["OpenSansLight.65b99859.eot","assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.eot"],"assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.eot"],"./assets\\fonts\\Open-Sans\\OpenSansLight\\OpenSansLight.woff":[["OpenSansLight.df5e39a6.woff","assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.woff"],"assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.woff"],"./assets\\fonts\\Open-Sans\\OpenSansLight\\OpenSansLight.ttf":[["OpenSansLight.866bc2cf.ttf","assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.ttf"],"assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.ttf"],"./assets\\fonts\\Open-Sans\\OpenSansRegular\\OpenSansRegular.eot":[["OpenSansRegular.d07a74b1.eot","assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.eot"],"assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.eot"],"./assets\\fonts\\Open-Sans\\OpenSansRegular\\OpenSansRegular.woff":[["OpenSansRegular.bed355f4.woff","assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.woff"],"assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.woff"],"./assets\\fonts\\Open-Sans\\OpenSansRegular\\OpenSansRegular.ttf":[["OpenSansRegular.39b4471e.ttf","assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.ttf"],"assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.ttf"],"./assets\\fonts\\Open-Sans\\OpenSansSemiBold\\OpenSansSemiBold.eot":[["OpenSansSemiBold.dce4eedd.eot","assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.eot"],"assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.eot"],"./assets\\fonts\\Open-Sans\\OpenSansSemiBold\\OpenSansSemiBold.woff":[["OpenSansSemiBold.f1a6c1f0.woff","assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.woff"],"assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.woff"],"./assets\\fonts\\Open-Sans\\OpenSansSemiBold\\OpenSansSemiBold.ttf":[["OpenSansSemiBold.da0fcfc0.ttf","assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.ttf"],"assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.ttf"],"./assets\\fonts\\Open-Sans\\OpenSansBold\\OpenSansBold.eot":[["OpenSansBold.fdb9cc12.eot","assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.eot"],"assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.eot"],"./assets\\fonts\\Open-Sans\\OpenSansBold\\OpenSansBold.woff":[["OpenSansBold.91cb355c.woff","assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.woff"],"assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.woff"],"./assets\\fonts\\Open-Sans\\OpenSansBold\\OpenSansBold.ttf":[["OpenSansBold.ee20cb0c.ttf","assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.ttf"],"assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.ttf"],"D:\\Programming\\Projects\\FSD Frontend\\Parcel_bundle\\src\\assets\\images\\bg-main.jpg":[["bg-main.0f62b4bb.jpg","assets/images/bg-main.jpg"],"bg-main.0f62b4bb.js","assets/images/bg-main.jpg"],"_css_loader":"C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./assets\\fonts\\Quicksand\\Quicksand-bold\\Quicksand-Bold.eot":[["Quicksand-Bold.5862033e.eot","assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.eot"],"assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.eot"],"./assets\\fonts\\Quicksand\\Quicksand-bold\\Quicksand-Bold.woff":[["Quicksand-Bold.3ba12430.woff","assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.woff"],"assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.woff"],"./assets\\fonts\\Quicksand\\Quicksand-bold\\Quicksand-Bold.ttf":[["Quicksand-Bold.b1139de2.ttf","assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.ttf"],"assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.ttf"],"./assets\\fonts\\Quicksand\\Quicksand-bold\\Quicksand-Bold.svg":[["Quicksand-Bold.4dea1ff1.svg","assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.svg"],"Quicksand-Bold.4dea1ff1.js","assets/fonts/Quicksand/Quicksand-bold/Quicksand-Bold.svg"],"./assets\\fonts\\Quicksand\\Quicksand-regular\\Quicksand-Regular.eot":[["Quicksand-Regular.36bf2dff.eot","assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.eot"],"assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.eot"],"./assets\\fonts\\Quicksand\\Quicksand-regular\\Quicksand-Regular.woff":[["Quicksand-Regular.e94fb1b6.woff","assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.woff"],"assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.woff"],"./assets\\fonts\\Quicksand\\Quicksand-regular\\Quicksand-Regular.ttf":[["Quicksand-Regular.ffc9d9ec.ttf","assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.ttf"],"assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.ttf"],"./assets\\fonts\\Quicksand\\Quicksand-regular\\Quicksand-Regular.svg":[["Quicksand-Regular.a9d46757.svg","assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.svg"],"Quicksand-Regular.a9d46757.js","assets/fonts/Quicksand/Quicksand-regular/Quicksand-Regular.svg"],"./assets\\fonts\\Montserrat\\Montserrat-Bold\\Montserrat-Bold.eot":[["Montserrat-Bold.9ce880df.eot","assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.eot"],"assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.eot"],"./assets\\fonts\\Montserrat\\Montserrat-Bold\\Montserrat-Bold.woff":[["Montserrat-Bold.2af363c0.woff","assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.woff"],"assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.woff"],"./assets\\fonts\\Montserrat\\Montserrat-Bold\\Montserrat-Bold.ttf":[["Montserrat-Bold.14de1886.ttf","assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.ttf"],"assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.ttf"],"./assets\\fonts\\Montserrat\\Montserrat-Bold\\Montserrat-Bold.svg":[["Montserrat-Bold.bc121b6d.svg","assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.svg"],"Montserrat-Bold.bc121b6d.js","assets/fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.svg"],"./assets\\fonts\\Montserrat\\Montserrat-Regular\\Montserrat-Regular.eot":[["Montserrat-Regular.b06d3a6e.eot","assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.eot"],"assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.eot"],"./assets\\fonts\\Montserrat\\Montserrat-Regular\\Montserrat-Regular.woff":[["Montserrat-Regular.e890bba2.woff","assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.woff"],"assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.woff"],"./assets\\fonts\\Montserrat\\Montserrat-Regular\\Montserrat-Regular.ttf":[["Montserrat-Regular.a2775d6d.ttf","assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.ttf"],"assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.ttf"],"./assets\\fonts\\Montserrat\\Montserrat-Regular\\Montserrat-Regular.svg":[["Montserrat-Regular.83d63e02.svg","assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.svg"],"Montserrat-Regular.83d63e02.js","assets/fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.svg"],"./assets\\fonts\\Material-Icons\\MaterialIcons-Regular.eot":[["MaterialIcons-Regular.7aff73a1.eot","assets/fonts/Material-Icons/MaterialIcons-Regular.eot"],"assets/fonts/Material-Icons/MaterialIcons-Regular.eot"],"./assets\\fonts\\Material-Icons\\MaterialIcons-Regular.woff2":[["MaterialIcons-Regular.849aec31.woff2","assets/fonts/Material-Icons/MaterialIcons-Regular.woff2"],"assets/fonts/Material-Icons/MaterialIcons-Regular.woff2"],"./assets\\fonts\\Material-Icons\\MaterialIcons-Regular.woff":[["MaterialIcons-Regular.fce9fa05.woff","assets/fonts/Material-Icons/MaterialIcons-Regular.woff"],"assets/fonts/Material-Icons/MaterialIcons-Regular.woff"],"./assets\\fonts\\Material-Icons\\MaterialIcons-Regular.ttf":[["MaterialIcons-Regular.326f798b.ttf","assets/fonts/Material-Icons/MaterialIcons-Regular.ttf"],"assets/fonts/Material-Icons/MaterialIcons-Regular.ttf"],"./assets\\fonts\\Font_Awesome\\fontawesome-webfont.eot":[["fontawesome-webfont.04172b94.eot","assets/fonts/Font_Awesome/fontawesome-webfont.eot"],"assets/fonts/Font_Awesome/fontawesome-webfont.eot"],"./assets\\fonts\\Font_Awesome\\fontawesome-webfont.woff2":[["fontawesome-webfont.ba48bb7d.woff2","assets/fonts/Font_Awesome/fontawesome-webfont.woff2"],"assets/fonts/Font_Awesome/fontawesome-webfont.woff2"],"./assets\\fonts\\Font_Awesome\\fontawesome-webfont.woff":[["fontawesome-webfont.ecdb1109.woff","assets/fonts/Font_Awesome/fontawesome-webfont.woff"],"assets/fonts/Font_Awesome/fontawesome-webfont.woff"],"./assets\\fonts\\Font_Awesome\\fontawesome-webfont.ttf":[["fontawesome-webfont.a69020b4.ttf","assets/fonts/Font_Awesome/fontawesome-webfont.ttf"],"assets/fonts/Font_Awesome/fontawesome-webfont.ttf"],"./assets\\fonts\\Font_Awesome\\fontawesome-webfont.svg":[["fontawesome-webfont.40d80bdd.svg","assets/fonts/Font_Awesome/fontawesome-webfont.svg"],"fontawesome-webfont.40d80bdd.js","assets/fonts/Font_Awesome/fontawesome-webfont.svg"],"./assets\\fonts\\Open-Sans\\OpenSansLight\\OpenSansLight.eot":[["OpenSansLight.65b99859.eot","assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.eot"],"assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.eot"],"./assets\\fonts\\Open-Sans\\OpenSansLight\\OpenSansLight.woff":[["OpenSansLight.df5e39a6.woff","assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.woff"],"assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.woff"],"./assets\\fonts\\Open-Sans\\OpenSansLight\\OpenSansLight.ttf":[["OpenSansLight.866bc2cf.ttf","assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.ttf"],"assets/fonts/Open-Sans/OpenSansLight/OpenSansLight.ttf"],"./assets\\fonts\\Open-Sans\\OpenSansRegular\\OpenSansRegular.eot":[["OpenSansRegular.d07a74b1.eot","assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.eot"],"assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.eot"],"./assets\\fonts\\Open-Sans\\OpenSansRegular\\OpenSansRegular.woff":[["OpenSansRegular.bed355f4.woff","assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.woff"],"assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.woff"],"./assets\\fonts\\Open-Sans\\OpenSansRegular\\OpenSansRegular.ttf":[["OpenSansRegular.39b4471e.ttf","assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.ttf"],"assets/fonts/Open-Sans/OpenSansRegular/OpenSansRegular.ttf"],"./assets\\fonts\\Open-Sans\\OpenSansSemiBold\\OpenSansSemiBold.eot":[["OpenSansSemiBold.dce4eedd.eot","assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.eot"],"assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.eot"],"./assets\\fonts\\Open-Sans\\OpenSansSemiBold\\OpenSansSemiBold.woff":[["OpenSansSemiBold.f1a6c1f0.woff","assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.woff"],"assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.woff"],"./assets\\fonts\\Open-Sans\\OpenSansSemiBold\\OpenSansSemiBold.ttf":[["OpenSansSemiBold.da0fcfc0.ttf","assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.ttf"],"assets/fonts/Open-Sans/OpenSansSemiBold/OpenSansSemiBold.ttf"],"./assets\\fonts\\Open-Sans\\OpenSansBold\\OpenSansBold.eot":[["OpenSansBold.fdb9cc12.eot","assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.eot"],"assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.eot"],"./assets\\fonts\\Open-Sans\\OpenSansBold\\OpenSansBold.woff":[["OpenSansBold.91cb355c.woff","assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.woff"],"assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.woff"],"./assets\\fonts\\Open-Sans\\OpenSansBold\\OpenSansBold.ttf":[["OpenSansBold.ee20cb0c.ttf","assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.ttf"],"assets/fonts/Open-Sans/OpenSansBold/OpenSansBold.ttf"],"D:\\Programming\\Projects\\FSD Frontend\\Parcel_bundle\\src\\assets\\images\\bg-main.jpg":[["bg-main.0f62b4bb.jpg","assets/images/bg-main.jpg"],"bg-main.0f62b4bb.js","assets/images/bg-main.jpg"],"D:\\Programming\\Projects\\FSD Frontend\\Parcel_bundle\\src\\assets\\images\\logo.png":[["logo.3f4a1874.png","assets/images/logo.png"],"logo.3f4a1874.js","assets/images/logo.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +150,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51517" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56393" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,5 +326,144 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/bundle-loader.js":[function(require,module,exports) {
+var getBundleURL = require('./bundle-url').getBundleURL;
+
+function loadBundlesLazy(bundles) {
+  if (!Array.isArray(bundles)) {
+    bundles = [bundles];
+  }
+
+  var id = bundles[bundles.length - 1];
+
+  try {
+    return Promise.resolve(require(id));
+  } catch (err) {
+    if (err.code === 'MODULE_NOT_FOUND') {
+      return new LazyPromise(function (resolve, reject) {
+        loadBundles(bundles.slice(0, -1)).then(function () {
+          return require(id);
+        }).then(resolve, reject);
+      });
+    }
+
+    throw err;
+  }
+}
+
+function loadBundles(bundles) {
+  return Promise.all(bundles.map(loadBundle));
+}
+
+var bundleLoaders = {};
+
+function registerBundleLoader(type, loader) {
+  bundleLoaders[type] = loader;
+}
+
+module.exports = exports = loadBundlesLazy;
+exports.load = loadBundles;
+exports.register = registerBundleLoader;
+var bundles = {};
+
+function loadBundle(bundle) {
+  var id;
+
+  if (Array.isArray(bundle)) {
+    id = bundle[1];
+    bundle = bundle[0];
+  }
+
+  if (bundles[bundle]) {
+    return bundles[bundle];
+  }
+
+  var type = (bundle.substring(bundle.lastIndexOf('.') + 1, bundle.length) || bundle).toLowerCase();
+  var bundleLoader = bundleLoaders[type];
+
+  if (bundleLoader) {
+    return bundles[bundle] = bundleLoader(getBundleURL() + bundle).then(function (resolved) {
+      if (resolved) {
+        module.bundle.register(id, resolved);
+      }
+
+      return resolved;
+    }).catch(function (e) {
+      delete bundles[bundle];
+      throw e;
+    });
+  }
+}
+
+function LazyPromise(executor) {
+  this.executor = executor;
+  this.promise = null;
+}
+
+LazyPromise.prototype.then = function (onSuccess, onError) {
+  if (this.promise === null) this.promise = new Promise(this.executor);
+  return this.promise.then(onSuccess, onError);
+};
+
+LazyPromise.prototype.catch = function (onError) {
+  if (this.promise === null) this.promise = new Promise(this.executor);
+  return this.promise.catch(onError);
+};
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js":[function(require,module,exports) {
+module.exports = function loadJSBundle(bundle) {
+  return new Promise(function (resolve, reject) {
+    var script = document.createElement('script');
+    script.async = true;
+    script.type = 'text/javascript';
+    script.charset = 'utf-8';
+    script.src = bundle;
+
+    script.onerror = function (e) {
+      script.onerror = script.onload = null;
+      reject(e);
+    };
+
+    script.onload = function () {
+      script.onerror = script.onload = null;
+      resolve();
+    };
+
+    document.getElementsByTagName('head')[0].appendChild(script);
+  });
+};
+},{}],0:[function(require,module,exports) {
+var b=require("../node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("js",require("../node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js"));b.load([]);
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js",0], null)
 //# sourceMappingURL=/src.80ee2152.js.map

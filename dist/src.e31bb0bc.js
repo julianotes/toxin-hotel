@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
+})({"../node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -10929,7 +10929,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{"process":"C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"../import-jquery.js":[function(require,module,exports) {
+},{"process":"../node_modules/process/browser.js"}],"../import-jquery.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10948,7 +10948,7 @@ exports.default = _default;
 "use strict";
 
 require("../import-jquery");
-},{"../import-jquery":"../import-jquery.js"}],"C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../import-jquery":"../import-jquery.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -10976,7 +10976,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51517" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56393" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -11152,5 +11152,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/Joker/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map

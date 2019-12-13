@@ -1,0 +1,7 @@
+block color-item
+mixin colorItem(style, options)
+  .color-item
+    .color-item__color(style={background: style.bg, opacity: style.op})
+    .color-item__info
+      h2.color-item__name #{options.name}
+      span.color-item__number #{options.number}

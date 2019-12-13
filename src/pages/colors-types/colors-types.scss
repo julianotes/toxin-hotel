@@ -1,4 +1,11 @@
-.container-ui{
+@import "/components/color-item/color-item.scss";
+
+.colors-types {
+ @include flex(row, space-between, center);
+ padding-top: 67px;
+ padding-left: 121px;
+}
+.container-uikit{
   margin: 0 auto;
   width: 100vw;
   max-width: 1440px;
@@ -14,8 +21,8 @@
  }
 }
 
-.logo-ui {
-  width: 100%;
+.header-uikit__logo {
+ margin-top: 30px;
 }
 
 

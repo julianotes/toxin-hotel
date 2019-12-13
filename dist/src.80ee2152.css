@@ -281,14 +281,8 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
   margin: 0;
-  /* 2 */
 }
 
 /**
@@ -3694,6 +3688,7 @@ template {
 
 .header {
   background: #FFFFFF;
+  height: 70px;
   -webkit-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
           box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
@@ -3972,6 +3967,10 @@ template {
 }
 
 .footer {
+  height: 372px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+          box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
   border-top: 1px solid rgba(31, 32, 65, 0.1);
 }
 
@@ -4195,16 +4194,10 @@ template {
   }
 }
 
-.header {
-  height: 70px;
-  background-color: #fff;
-}
-
-.footer {
-  height: 372px;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
-          box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+.logo {
+  width: 106px;
+  height: 40px;
+  background: url(/logo.3f4a1874.png);
 }
 
 /*# sourceMappingURL=/src.80ee2152.css.map */
