@@ -10944,11 +10944,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = window.$ = window.jQuery = _jquery.default;
 
 exports.default = _default;
-},{"jquery":"../node_modules/jquery/dist/jquery.js"}],"index.js":[function(require,module,exports) {
+},{"jquery":"../node_modules/jquery/dist/jquery.js"}],"pages/colors-types/colors-types.js":[function(require,module,exports) {
+
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("../import-jquery");
-},{"../import-jquery":"../import-jquery.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./pages/colors-types/colors-types");
+},{"../import-jquery":"../import-jquery.js","./pages/colors-types/colors-types":"pages/colors-types/colors-types.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -10976,7 +10980,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57953" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58142" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
