@@ -31,11 +31,11 @@ header.header.header--mobile
       ul.nav__ul
         include /components/nav-link/nav-link.pug
         block nav-link
-          +linkText('https://github.com/julianotes', '_blank', 'О нас')
-          +linkText('/pages/search.pug', '_blank', 'Услуги')
-          +linkText('/pages/colors-types/colors-types.pug', '_blank', 'Вакансии')
-          +linkText('/pages/404.pug', '_blank', 'Новости')
-          +linkText('/pages/404.pug', '_blank', 'Соглашения')
+          +linkText('', {href: 'https://github.com/julianotes', target:'_blank', text: 'О нас' })
+          +linkText('arrow-down', {href: '#', target:'_blank', text: 'Услуги' })
+          +linkText('', {href: 'pages/colors-types/colors-types.pug', target:'_blank', text: 'Вакансии'})
+          +linkText('', {href: '#', target:'_blank', text: 'Новости' })
+          +linkText('arrow-down', {href: '#', target:'_blank', text: 'Соглашения'})
     .header-user__wrap
       .header-user__singin
       .header-user__singup

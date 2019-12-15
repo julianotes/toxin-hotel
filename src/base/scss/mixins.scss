@@ -18,7 +18,6 @@
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 30px;
-    letter-spacing: 1px;
     color: $primary-color;
     @media(max-width: 414px) {
     font-size: 1.375rem;
@@ -50,11 +49,12 @@
   font-weight: $mainFontWeight;
   font-size: $mainFontSz;
   line-height: $mainLineHeight;
-  color: rgba(31, 32, 65, 0.75);
+  color:$primary-color;
+  opacity: 0.75;
 }
 
-@mixin h2lastFont {
-  font-family: $lastFont; 
+@mixin h2RuFont {
+  font-family: $ruFont; 
   font-style: normal; 
   font-weight: 700;
   font-size: 1.3571428571428572rem;
@@ -62,13 +62,12 @@
   color: $primary-color; 
 }
 
-@mixin h1lastFont {
-  font-family: $lastFont;
+@mixin h1RuFont {
+  font-family: $ruFont;
     font-style: normal;
     font-weight: 700;
-    font-size: 1.7142857142857142rem;
+    font-size: 1.5rem;
     line-height: 30px;
-    letter-spacing: -2px;
     color: $primary-color;
 
     @media(max-width: 414px) {

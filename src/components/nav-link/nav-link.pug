@@ -1,5 +1,5 @@
 block nav-link
-  mixin linkText(href, target, linkText)
-    li.nav-link__li
-      a.nav-link__link(href = href target = target  rel = "noopener noreferrer") #{linkText}
+  mixin linkText(isClass, element)
+      li(class= "nav-link__li" + ' ' + isClass)
+        a.nav-link__link(href = element.href target = element.target  rel = "noopener noreferrer") #{element.text}
 

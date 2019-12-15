@@ -1,9 +1,7 @@
 @import "/components/color-item/color-item.scss";
 
-.colors-types {
- @include flex(row, space-between, center);
- padding-top: 67px;
- padding-left: 121px;
+.hidden{
+  @include visually-hidden;
 }
 .container-uikit{
   margin: 0 auto;
@@ -21,8 +19,84 @@
  }
 }
 
+.colors-types {
+  @include flex(row, flex-start, flex-start);
+  padding-top: 67px;
+  padding-left: 121px;
+ 
+ }
+
 .header-uikit__logo {
  margin-top: 30px;
 }
 
+.colors-types__colors {
+  width: 53%;
+}
 
+.colors-types__types {
+  @include flex(column, space-between,flex-start);
+
+}
+
+.type-item {
+  @include flex(row, flex-start, flex-start);
+  margin-bottom: 50px;
+}
+.type-item__title {
+  width: 34px;
+}
+.type-item__text {
+  margin-left: 30px;
+}
+
+.first {
+  font-family:$mainFont;
+  font-size: 24px;
+  line-height: 29px;
+  color: rgba(31, 32, 65, 0.25);
+  text-transform: uppercase;
+  padding-left:5px;
+}
+
+.second {
+  font-family:$mainFont;
+  font-size: 19px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+  padding-left: 10px;
+}
+.third {
+  font-family:$mainFont;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+  padding-left: 15px;
+}
+
+.fourth {
+  font-family: $mainFont;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.h1 {
+  @include h1Style;
+  max-width: 336px;
+  text-align: left;
+}
+
+.h2 {
+  @include h2Style;
+  max-width: 282px;
+}
+.h3 {
+  @include h3Style;
+}
+.body-ex {
+  @include bodyFont;
+  max-width: 301px;
+}

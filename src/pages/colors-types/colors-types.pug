@@ -13,6 +13,7 @@ block page-title
             </svg>
         main.main
           section.colors-types
+            h1.hidden UI kit - Color & types
             .colors-types__colors
               include ../../components/color-item/color-item.pug
               +colorItem({bg: '#1F2041', op: '1'}, {name:'Dark Shade 100%', number:'#1F2041'})
@@ -23,15 +24,19 @@ block page-title
               +colorItem({bg: '#bc9cff', op:'1'},{name:'Purple', number:'#bc9cff'})
               +colorItem({bg: '#6fcf97', op:'1'},{name:'Green', number:'#6fcf97'})
             .colors-types__types
-              block type
-               mixin item-type(title, text)
-                .type-item 
-                  .type-item__title #{title}
-                  .type-item__text #{text}
-                  +item-type('h1','This one is the sub-section or widget title')
-                  +item-type('h2', 'Next one is the item title inside widgets')
-                  +item-type('h3', 'This is a label or CTA text')
-                  +item-type('body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
+              .type-item 
+                span.type-item__title.first h1
+                p.type-item__text.h1 This one is the sub-section or widget title
+              .type-item
+                span.type-item__title.second h2
+                p.type-item__text.h2  Next one is the item title inside widgets
+              .type-item
+                span.type-item__title.third h3
+                p.type-item__text.h3 This is a label or CTA text
+              .type-item
+                span.type-item__title.fourth Body
+                p.type-item__text.body-ex This is the body text which is used for most of the design, like paragraphs, lists, etc.
+ 
 
 
  

@@ -23,3 +23,11 @@
     margin-right: 35px;
   }
 }
+.arrow-down {
+  @include flex(row,space-between,center);
+  
+  &:after{
+    content:url(/assets/images/arrow-down.svg);
+    padding-left: 10px;
+  }
+}

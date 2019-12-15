@@ -1,5 +1,5 @@
 import "../import-jquery";
-import "./pages/colors-types/colors-types";
+import "./pages/colors-types/colors-types.pug";
 // Components
 
 
