@@ -1,4 +1,5 @@
 @import "src/components/nav-link/nav-link.scss";
+@import "src/components/button/button.scss";
 
 .header {
   background: #FFFFFF;
@@ -17,17 +18,45 @@
     width: 93vw;
   }
 }
+
+.header-nav__wrap{
+  @include flex(row,center,center);
+  margin: 0 20px 0 auto;
+
+  @media(max-width: 1024px) {
+    display: none;
+  }
+}
 .nav__ul {
   @include flex(row,flex-start,center);
   .nav-link__li {
-    margin-right: 35px;
+    margin-right: 20px;
   }
+}
+.nav-link__li:last-child {
+  margin-right: 0;
 }
 .arrow-down {
   @include flex(row,space-between,center);
   
   &:after{
     content:url(/assets/images/arrow-down.svg);
-    padding-left: 10px;
+    width: 24px;
+    padding-left: 5px;
   }
+}
+.header-user__wrap {
+  @include flex(row, space-between,center); 
+
+  @media(max-width: 1024px) {
+    display: none;
+  }
+}
+
+.header-user__singin {
+  margin-right: 20px;
+}
+
+.button-singup {
+  width: 196px;
 }

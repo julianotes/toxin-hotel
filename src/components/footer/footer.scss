@@ -1,9 +1,6 @@
-@import "/components/footer/blocks/footer-item.scss";
-@import "/components/footer/blocks/footer-title.scss";
 @import "/components/nav-link/nav-link.scss";
-@import "/components/footer/blocks/footer-copyright.scss";
-@import "/components/footer/blocks/footer-subs.scss";
-@import "/components/footer/blocks/footer-desc.scss";
+@import "/components/input/input.scss";
+
 
 .footer {
   height: 372px;
@@ -24,5 +21,127 @@
 .footer-main__info {
   margin-right: 30px;
 }
+
+.footer-main__descr {
+  max-width: 270px;
+  @include bodyFont;
+  margin-top: 17px;
+  @media(max-width: 1200px) {
+    font-size: 13px;
+  }
+}
+
+.footer-main__title {
+  @include h3Style;
+  margin-bottom: 12px;
+
+  @media(max-width: 1200px) {
+    font-size: 12px;
+  }
+}
+
+.footer-main__item {
+  margin-top: 5px;
+  width: 17.241%; // 200px
+}
+
+.footer-main__subs {
+  margin-top: 5px;
+  max-width: 260px;
+}
+
+.footer-main__subs-text {
+  @include bodyFont;
+  margin-top: 16px;
+  margin-bottom: 23px;
+
+  @media(max-width: 1200px) {
+    font-size: 13px;
+  }
+}
+
+.text-field__wrap {
+  max-width: 260px;
+  @include flex(row,space-between, center);
+  position: relative;
+
+  &:after {
+    content: url(/assets/images/arrow-right.svg);
+    position: absolute;
+    right: 12px;
+    top: 13px;
+    cursor: pointer;
+  }
+}
+.footer-main__arrow-right{
+  .arrow-right__img{
+    
+  }
+}
+.footer-copyright {
+  height: 70px;
+  @include flex(row, center, center);
+  border-top: 1px solid rgba(31,32,65,.1);
+}
+.footer-copyright__wrap-content {
+  width: 1160px;
+  @include flex(row, space-between,center);
+
+  @media(max-width: 1216px) {
+    width: 93vw;
+  }
+  @media(max-width: 574px) {
+    @include flex(column,center,center);
+    height: 93px;
+  }
+}
+.footer-copyright__info {
+  @include bodyFont;
+  line-height: 17px;  
+  @media(max-width: 1200px) {
+    font-size: 12px;
+  }
+  @media(max-width: 574px) {
+   margin-bottom: 10px;
+   text-align: center;
+  }
+}
+
+.footer-copyright__social-wrap {
+  @include flex(row,space-between,center);
+  width: 112px;
+}
+
+.fa{
+  display: block;
+  font-family: Font_Awesome;
+  background:$main-grad;
+  background-clip: text;
+  color: transparent;
+}
+.fa-twitter:before {
+  content:'\f099';  
+  font-size: 24px;
+  line-height: 23px;
+  display: initial;
+  text-rendering: auto;
+}
+.fa-facebook:before {
+  content: '\f230';
+  font-size: 24px;
+  line-height: 23px;
+  display: initial;
+  text-rendering: auto;
+}
+.fa-instagram:before {
+  content: '\f16d';
+  font-size: 24px;
+  line-height: 23px;
+  display: initial;
+  text-rendering: auto;
+}
+
+
+
 
 

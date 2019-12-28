@@ -1,3 +1,4 @@
+include mixins.pug
 block footer
 footer.footer.footer--mobile
   .container
@@ -29,50 +30,47 @@ footer.footer.footer--mobile
                 </defs>
               </svg>
           block footer-descr
-            include /components/footer/blocks/footer-desc.pug
             +footerDesc('Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»')
       .footer-main__item
         block footer-item
-        include /components/footer/blocks/footer-item.pug
             block footer-title
               +footerTitle('навигация')
               ul.footer-main__ul
                 block nav-link
-                  +linkText('', {href: 'https://github.com/julianotes', target:'_blank', text: 'О нас' })
+                  +linkText('', {href: 'https://github.com/julianotes', target:'_blank', text: 'О нас'})
                   +linkText('', {href: '#', target:'_blank', text: 'Новости' })
-                  +linkText('', {href: '#', target:'_blank', text: 'Служба поддержки' })
+                  +linkText('', {href: '#', target:'_blank', text: 'Служба поддержки'})
                   +linkText('', {href: '#', target:'_blank', text: 'Услуги' })
       .footer-main__item
         block footer-item
-        include /components/footer/blocks/footer-item.pug
             block footer-title
               +footerTitle('о нас')
               ul.footer-main__ul
                 block nav-link
                   +linkText('', {href: '#', target:'_blank', text: 'О сервисе' })
-                  +linkText('', {href: '#', target:'_blank', text: 'Наша команда' })
+                  +linkText('', {href: '#', target:'_blank', text: 'Наша команда'})
                   +linkText('', {href: '#', target:'_blank', text: 'Вакансии' })
                   +linkText('', {href: '#', target:'_blank', text: 'Инвесторы' })
       .footer-main__item
         block footer-item
-        include /components/footer/blocks/footer-item.pug
             block footer-title
               +footerTitle('Служба поддержки')
               ul.footer-main__ul
                 block nav-link
                   +linkText('', {href: '#', target:'_blank', text: 'Соглашения' })
                   +linkText('', {href: '#', target:'_blank', text: 'Сообщества' })
-                  +linkText('', {href: '#', target:'_blank', text: 'Связь с нами' })
+                  +linkText('', {href: '#', target:'_blank', text: 'Связь с нами'})
       .footer-main__subs
           block footer-title
-            include /components/footer/blocks/footer-title.pug
             +footerTitle('Подписка')
           block footer-subs
-            include /components/footer/blocks/footer-subs.pug
             +footerSubs('Получайте специальные предложения и новости сервиса')
-
-    .footer-copyright
+          block input
+            include /components/input/input.pug
+            +input({for: 'input', class:'label-input'}, {id:'input', class:'text-field', name:'email', type:'email', placeholder: 'Email', tabindex:'7', required:'Пожалуйста, заполните это поле.'})
+            button.footer-main__arrow-right(type=submit)
+              img.arrow-right__img
+  .footer-copyright
       block footer-c-info
-      include /components/footer/blocks/footer-copyright.pug
       +footerCInfo('Copyright © 2018 Toxin отель. Все права защищены.')
 

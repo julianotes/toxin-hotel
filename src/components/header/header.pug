@@ -27,7 +27,7 @@ header.header.header--mobile
           </linearGradient>
           </defs>
         </svg>
-    .header-nav__wrap
+    nav.header-nav__wrap
       ul.nav__ul
         include /components/nav-link/nav-link.pug
         block nav-link
@@ -38,6 +38,10 @@ header.header.header--mobile
           +linkText('arrow-down', {href: '#', target:'_blank', text: 'Соглашения'})
     .header-user__wrap
       .header-user__singin
+        include /components/button/button.pug
+        block button
+        +button({class: "button-singin button-inverse", type:"submit", value:"singin", text:"войти"}) 
       .header-user__singup
+        +button({class: "button-singup", type:"submit", value:"singup", text:"зарегистрироваться"})
 
 

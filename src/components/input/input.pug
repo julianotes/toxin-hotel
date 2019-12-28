@@ -1,5 +1,12 @@
-block text-field
-mixin text-field(for, classLabel, id, class, name, placeholder, type )
-.text-field__wrap
-    label.text-field__label(for = for classLabel = class)
-    input.text-field(id = id class = class name = name placeholder = placeholder type = type)
+block input
+mixin input(label,input, uikit)
+    form.text-field__wrap
+        input(id = input.id
+                class = 'input ' + input.class
+                name = input.name
+                type = input.type
+                placeholder = input.placeholder
+                tabindex = input.tabindex 
+                required = input.req)
+        label.text-field__label(for = label.for class = label.class)
+

@@ -1,0 +1,33 @@
+block footer-descr
+mixin footerDesc(footerDescr)
+  p.footer-main__descr #{footerDescr}
+
+block footer-title
+  mixin footerTitle(footerTitle)
+    h3.footer-main__title #{footerTitle}
+
+block footer-item
+  block footer-title
+      block nav-link
+        include /components/nav-link/nav-link.pug
+
+
+block footer-subs
+mixin footerSubs(subsText)
+  p.footer-main__subs-text #{subsText}
+
+block footer-c-info
+mixin footerCInfo(footerInfo)
+   .footer-copyright__wrap-content
+      .footer-copyright__info #{footerInfo}
+      .footer-copyright__social
+         ul.footer-copyright__social-wrap
+            li.footer-copyright__li
+               a.footer-copyright__link(href="https://www.twitter.com")
+                  i.fa.fa-twitter( aria-hidden="true")
+            li.footer-copyright__li
+               a.footer-copyright__link(href="https://www.facebook.com")
+                  i.fa.fa-facebook( aria-hidden="true")
+            li.footer-copyright__li
+               a.footer-copyright__link(href="https://www.instagram.com")
+                  i.fa.fa-instagram( aria-hidden="true")

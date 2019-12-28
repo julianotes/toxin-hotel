@@ -16,6 +16,7 @@
 
  @media(max-width: 580px) {
    width: 98vw;
+   padding: 0 3% 0 3%;
  }
 }
 
@@ -23,7 +24,10 @@
   @include flex(row, flex-start, flex-start);
   padding-top: 67px;
   padding-left: 121px;
- 
+
+  @media (max-width: 768px){
+    padding-left: 0;
+  } 
  }
 
 .header-uikit__logo {
@@ -45,10 +49,9 @@
 }
 .type-item__title {
   width: 34px;
+  margin-right: 30px;
 }
-.type-item__text {
-  margin-left: 30px;
-}
+
 
 .first {
   font-family:$mainFont;

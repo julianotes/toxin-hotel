@@ -1,5 +1,5 @@
-block variables
-  - var buttonText  = 'register'
-button.button(type="button") #{buttonText}
-.button-reverse-wrap
-  button.button-reverse(type="button") #{buttonText}
+mixin button(button)
+  button.button(class = button.class
+                 type=button.type
+                 value=button.value
+                 ) #{button.text}
