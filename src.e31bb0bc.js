@@ -10944,13 +10944,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = window.$ = window.jQuery = _jquery.default;
 
 exports.default = _default;
-},{"jquery":"../node_modules/jquery/dist/jquery.js"}],"index.js":[function(require,module,exports) {
+},{"jquery":"../node_modules/jquery/dist/jquery.js"}],"pages/colors-types/colors-types.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/header/header.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $('.header-burger').click(function (event) {
+    $('.header-burger, .header-burger__lines').toggleClass('mobile');
+  });
+});
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("../import-jquery");
 
 require("./pages/colors-types/colors-types.pug");
-},{"../import-jquery":"../import-jquery.js","./pages/colors-types/colors-types.pug":"pages/colors-types/colors-types.pug"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./pages/colors-types/colors-types.scss");
+
+require("./components/header/header.js");
+},{"../import-jquery":"../import-jquery.js","./pages/colors-types/colors-types.pug":"pages/colors-types/colors-types.pug","./pages/colors-types/colors-types.scss":"pages/colors-types/colors-types.scss","./components/header/header.js":"components/header/header.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -10978,7 +10993,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55076" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60780" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -11269,13 +11284,35 @@ LazyPromise.prototype.catch = function (onError) {
   if (this.promise === null) this.promise = new Promise(this.executor);
   return this.promise.catch(onError);
 };
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/parcel-bundler/src/builtins/loaders/browser/html-loader.js":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js":[function(require,module,exports) {
+module.exports = function loadJSBundle(bundle) {
+  return new Promise(function (resolve, reject) {
+    var script = document.createElement('script');
+    script.async = true;
+    script.type = 'text/javascript';
+    script.charset = 'utf-8';
+    script.src = bundle;
+
+    script.onerror = function (e) {
+      script.onerror = script.onload = null;
+      reject(e);
+    };
+
+    script.onload = function () {
+      script.onerror = script.onload = null;
+      resolve();
+    };
+
+    document.getElementsByTagName('head')[0].appendChild(script);
+  });
+};
+},{}],"../node_modules/parcel-bundler/src/builtins/loaders/browser/html-loader.js":[function(require,module,exports) {
 module.exports = function loadHTMLBundle(bundle) {
   return fetch(bundle).then(function (res) {
     return res.text();
   });
 };
 },{}],0:[function(require,module,exports) {
-var b=require("../node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("html",require("../node_modules/parcel-bundler/src/builtins/loaders/browser/html-loader.js"));b.load([["colors-types.html","pages/colors-types/colors-types.pug"]]).then(function(){require("index.js");});
+var b=require("../node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("js",require("../node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js"));b.register("html",require("../node_modules/parcel-bundler/src/builtins/loaders/browser/html-loader.js"));b.load([["colors-types.html","pages/colors-types/colors-types.pug"]]).then(function(){require("index.js");});
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js",0], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map
