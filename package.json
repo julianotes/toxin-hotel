@@ -27,6 +27,7 @@
     "sass": "^1.23.1"
   },
   "dependencies": {
+    "import-jquery": "^1.0.1",
     "src": "^1.1.2"
   }
 }

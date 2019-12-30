@@ -23,7 +23,7 @@
   @include flex(row,center,center);
   margin: 0 20px 0 auto;
 
-  @media(max-width: 1024px) {
+  @media(max-width: 1023px) {
     display: none;
   }
 }
@@ -48,7 +48,7 @@
 .header-user__wrap {
   @include flex(row, space-between,center); 
 
-  @media(max-width: 1024px) {
+  @media(max-width: 1023px) {
     display: none;
   }
 }
@@ -59,4 +59,57 @@
 
 .button-singup {
   width: 196px;
+}
+
+.header-burger {
+  display: none;
+  @media(max-width:1024px) {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content:'';
+    position: absolute;
+    background-color: $primary-color;
+    opacity: .50;
+    border-radius: 4px;
+    height: 10%;
+    width: 100%;
+    left:0;
+    transition: all 0.3s ease;
+    }
+    &:before {
+      top:0;
+    }
+    &:after {
+      bottom: 0;
+    }
+    &.mobile:before {
+      transform: rotate(45deg);
+      top:47px;
+    }
+    &.mobile:after {
+      transform: rotate(-45deg);
+      bottom: 47px;
+    }
+  }
+  &__lines {
+  position: absolute;
+  background-color:$primary-color;
+  opacity: .50;
+  border-radius: 4px;
+  top:14px;
+  left:0;
+  height: 10%;
+  width: 100%;
+  transition: all 0.3s ease;
+
+  &.mobile {
+    transform: scale(0);
+  }
+  }
 }

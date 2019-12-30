@@ -10949,7 +10949,13 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/header/header.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $('.header-burger').click(function (event) {
+    $('.header-burger, .header-burger__lines').toggleClass('mobile');
+  });
+});
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("../import-jquery");
@@ -10957,7 +10963,9 @@ require("../import-jquery");
 require("./pages/colors-types/colors-types.pug");
 
 require("./pages/colors-types/colors-types.scss");
-},{"../import-jquery":"../import-jquery.js","./pages/colors-types/colors-types.pug":"pages/colors-types/colors-types.pug","./pages/colors-types/colors-types.scss":"pages/colors-types/colors-types.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./components/header/header.js");
+},{"../import-jquery":"../import-jquery.js","./pages/colors-types/colors-types.pug":"pages/colors-types/colors-types.pug","./pages/colors-types/colors-types.scss":"pages/colors-types/colors-types.scss","./components/header/header.js":"components/header/header.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -10985,7 +10993,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49945" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60780" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
