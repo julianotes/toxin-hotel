@@ -17,6 +17,7 @@
   "devDependencies": {
     "@parcel/optimizer-cssnano": "^2.0.0-alpha.2",
     "autoprefixer": "^9.6.5",
+    "css-loader": "^3.4.0",
     "cssnano": "^4.1.10",
     "gh-pages": "^2.1.1",
     "jquery": "^3.4.1",
@@ -27,7 +28,9 @@
     "sass": "^1.23.1"
   },
   "dependencies": {
+    "components": "^0.1.0",
     "import-jquery": "^1.0.1",
+    "jquery-ui-dist": "^1.12.1",
     "src": "^1.1.2"
   }
 }

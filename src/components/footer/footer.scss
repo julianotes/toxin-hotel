@@ -43,6 +43,9 @@
 .footer-main__item {
   margin-top: 5px;
   width: 17.241%; // 200px
+  @media(max-width: 1271px){
+    width: auto;
+  }
 }
 
 .footer-main__subs {
@@ -91,7 +94,7 @@
     width: 93vw;
   }
   @media(max-width: 574px) {
-    @include flex(column,center,center);
+    @include flex(column-reverse,center,center);
     height: 93px;
   }
 }
@@ -102,7 +105,6 @@
     font-size: 12px;
   }
   @media(max-width: 574px) {
-   margin-bottom: 10px;
    text-align: center;
   }
 }
@@ -110,6 +112,10 @@
 .footer-copyright__social-wrap {
   @include flex(row,space-between,center);
   width: 112px;
+
+  @media(max-width: 574px) {
+    margin-bottom: 10px;
+   }
 }
 
 .fa{
