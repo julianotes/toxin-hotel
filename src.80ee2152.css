@@ -3704,9 +3704,15 @@ template {
           align-items: center;
   margin: 0 20px 0 auto;
 }
-@media (max-width: 1023px) {
+@media (max-width: 920px) {
   .header-nav__wrap {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 3;
   }
 }
 
@@ -3775,7 +3781,7 @@ template {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (max-width: 1023px) {
+@media (max-width: 920px) {
   .header-user__wrap {
     display: none;
   }
@@ -3788,17 +3794,33 @@ template {
 .button-singup {
   width: 196px;
 }
+@media (max-width: 1024px) {
+  .button-singup {
+    height: 30px;
+    width: 160px;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .button-singin {
+    height: 30px;
+    width: 80px;
+    font-size: 0.6rem;
+  }
+}
 
 .header-burger {
   display: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 920px) {
   .header-burger {
     display: block;
     position: relative;
     width: 40px;
     height: 30px;
     cursor: pointer;
+    z-index: 5;
   }
   .header-burger:before, .header-burger:after {
     content: "";
@@ -3811,6 +3833,7 @@ template {
     left: 0;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    z-index: 5;
   }
   .header-burger:before {
     top: 0;
@@ -3821,12 +3844,12 @@ template {
   .header-burger.mobile:before {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
-    top: 47px;
+    top: 13px;
   }
   .header-burger.mobile:after {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    bottom: 47px;
+    bottom: 13px;
   }
 }
 .header-burger__lines {
@@ -4060,6 +4083,11 @@ template {
   margin-top: 5px;
   width: 17.241%;
 }
+@media (max-width: 1271px) {
+  .footer-main__item {
+    width: auto;
+  }
+}
 
 .footer-main__subs {
   margin-top: 5px;
@@ -4159,9 +4187,9 @@ template {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: center;
@@ -4191,7 +4219,6 @@ template {
 }
 @media (max-width: 574px) {
   .footer-copyright__info {
-    margin-bottom: 10px;
     text-align: center;
   }
 }
@@ -4213,6 +4240,11 @@ template {
       -ms-flex-align: center;
           align-items: center;
   width: 112px;
+}
+@media (max-width: 574px) {
+  .footer-copyright__social-wrap {
+    margin-bottom: 10px;
+  }
 }
 
 .fa {
