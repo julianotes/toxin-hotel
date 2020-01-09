@@ -1,0 +1,1 @@
+{"id":"components/blocks/button/button.pug","dependencies":[],"generated":{"html":"<button class=\"button\" type=\"button\">register</button><div class=\"button-reverse-wrap\"><button class=\"button-reverse\" type=\"button\">register</button></div>"},"sourceMaps":null,"error":null,"hash":"4ac7fcab52fa3588d3d6451ae47e24b7","cacheData":{}}
