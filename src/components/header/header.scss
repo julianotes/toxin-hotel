@@ -58,27 +58,33 @@ body.lock{
     margin-right: 20px;
     @media(max-width: 920px){
       width: inherit;
+      margin: 0;
     }
   }
   @media(max-width: 920px){
     @include flex(column, center,flex-start);
-    width: 100%;
+    width: 100%; 
   }
 }
 
 .nav-link__li:last-child {
   margin-right: 0;
-}
-.nav-link__link{
-  @media(max-width:920px){
+  @media(max-width: 920px){
     text-align: center;
+    font-size: 18px;
   }
 }
+.nav-link__link {
+  @media(max-width: 920px){
+    font-size: 25px;
+  }
+}
+
 .arrow-down {
   @include flex(row,space-between,center);
     
   &:after{
-    content:url(/assets/images/arrow-down.svg);
+    content:url('/assets/images/arrow-down.svg');
     width: 24px;
     padding-left: 5px;
   }
