@@ -12,7 +12,6 @@
   }
   @media(max-width: 768px){
     min-height: 976px;
-    overflow: auto;
   }
 }
 .container {
@@ -25,7 +24,10 @@
   width: 100%;
   padding-top: 100px;
   @media(max-width:768px){
+    height: auto;
     padding-top: 50px;
+    padding-left: 8%;
+    padding-right: 8%;
   }
 }
 .nav-link__link{
@@ -91,7 +93,6 @@
   max-width: 260px;
   @media(max-width: 768px) {
     max-width: inherit;
-    padding: 0 7% 0 7%;
   }
 }
 

@@ -4126,7 +4126,6 @@ template {
 @media (max-width: 768px) {
   .footer {
     min-height: 976px;
-    overflow: auto;
   }
 }
 
@@ -4170,7 +4169,10 @@ template {
 }
 @media (max-width: 768px) {
   .footer-main {
+    height: auto;
     padding-top: 50px;
+    padding-left: 8%;
+    padding-right: 8%;
   }
 }
 
@@ -4269,7 +4271,6 @@ template {
 @media (max-width: 768px) {
   .footer-main__subs {
     max-width: inherit;
-    padding: 0 7% 0 7%;
   }
 }
 
