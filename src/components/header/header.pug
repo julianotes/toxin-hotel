@@ -33,11 +33,11 @@ header.header.header--mobile
       ul.nav__ul
         include /components/nav-link/nav-link.pug
         block nav-link
-          +linkText('', {href: 'https://github.com/julianotes', target:'_blank', text: 'О нас' })
-          +linkText('arrow-down', {href: '#', target:'_blank', text: 'Услуги' })
-          +linkText('', {href: 'colors-types.pug', target:'_blank', text: 'Вакансии'})
-          +linkText('', {href: '#', target:'_blank', text: 'Новости' })
-          +linkText('arrow-down', {href: '#', target:'_blank', text: 'Соглашения'})
+          +linkText('top', {href: 'https://github.com/julianotes', target:'_blank', text: 'О нас' })
+          +linkText('top arrow-down', {href: '#', target:'_blank', text: 'Услуги' })
+          +linkText('top', {href: 'colors-types.pug', target:'_blank', text: 'Вакансии'})
+          +linkText('top', {href: '#', target:'_blank', text: 'Новости' })
+          +linkText('top arrow-down', {href: '#', target:'_blank', text: 'Соглашения'})
     .header-user__wrap
       .header-user__singin
         include /components/button/button.pug

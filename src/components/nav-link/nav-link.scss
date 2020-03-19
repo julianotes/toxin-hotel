@@ -1,5 +1,8 @@
 .nav-link__li {
   user-select: none;
+  @media(max-width: 920px) {
+    text-align: left;
+  }
 }
 .nav-link__link{
   display: block;
@@ -16,5 +19,8 @@
   @media(max-width: 1200px) {
     font-size: 13px;
   }
-
+  @media(max-width: 920px){
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
