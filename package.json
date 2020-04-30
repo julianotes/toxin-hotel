@@ -20,7 +20,7 @@
     "css-loader": "^3.4.0",
     "cssnano": "^4.1.10",
     "gh-pages": "^2.1.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-ui": "^1.12.1",
     "parcel-plugin-imagemin": "^3.0.0",
     "postcss-modules": "^1.4.1",
