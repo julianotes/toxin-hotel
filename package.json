@@ -24,7 +24,7 @@
     "jquery-ui": "^1.12.1",
     "parcel-plugin-imagemin": "^3.0.0",
     "postcss-modules": "^1.4.1",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "sass": "^1.23.1"
   },
   "dependencies": {
